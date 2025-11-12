@@ -88,7 +88,7 @@ export const ImportCurlModal: React.FC<ImportCurlModalProps> = ({
           )}
 
           {/* Info Box */}
-          <div className="p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
+          <div className="bg-gray-800/50">
             <p className="text-xs text-gray-400 leading-relaxed">
               <strong className="text-gray-300">Tip:</strong> You can copy cURL commands from browser DevTools (Network tab) 
               or API documentation. The parser will automatically extract the URL, method, headers, body, and authentication.

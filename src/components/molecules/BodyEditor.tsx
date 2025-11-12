@@ -57,52 +57,48 @@ export const BodyEditor: React.FC<BodyEditorProps> = ({ value, onChange, disable
 
   return (
     <div className="bg-gray-900">
-      <div className="px-6 py-3 border-b border-gray-800 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-gray-400">Content Type</span>
+      <div className="px-4 md:px-6 py-2 md:py-3 border-b border-gray-800 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
+          <span className="text-xs md:text-sm text-gray-400">Content Type</span>
           <div className="relative">
             <select 
               value={contentType}
               onChange={(e) => setContentType(e.target.value)}
-              className="bg-gray-800 text-white text-sm px-3 py-1.5 pr-8 rounded border border-gray-700 appearance-none cursor-pointer hover:bg-gray-750 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 pr-6 md:pr-8 rounded border border-gray-700 appearance-none cursor-pointer hover:bg-gray-750 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               <option value="application/json">application/json</option>
               <option value="application/xml">application/xml</option>
               <option value="text/plain">text/plain</option>
             </select>
-            <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ChevronDown className="absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 text-gray-400 pointer-events-none" />
           </div>
-          <button className="text-sm text-gray-400 hover:text-white flex items-center gap-1">
-            <span className="rotate-90">⟳</span>
-            Override
-          </button>
         </div>
       </div>
       
-      <div className="px-6 py-2 border-b border-gray-800 bg-gray-850">
-        <div className="text-xs text-gray-500 mb-2">Raw Request Body</div>
-        <div className="flex gap-2 items-center">
-          <button className="p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" title="Delete">
-            <Trash2 className="w-4 h-4" />
+      <div className="px-4 md:px-6 py-1.5 md:py-2 border-b border-gray-800 bg-gray-850">
+        <div className="text-xs text-gray-500 mb-1.5 md:mb-2">Raw Request Body</div>
+        <div className="flex gap-1.5 md:gap-2 items-center">
+          <button className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" title="Delete">
+            <Trash2 className="w-3.5 h-3.5 md:w-4 md:h-4" />
           </button>
           <button 
             onClick={formatJSON}
-            className="p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" 
+            className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" 
             title="Format"
           >
-            <Wand2 className="w-4 h-4" />
+            <Wand2 className="w-3.5 h-3.5 md:w-4 md:h-4" />
           </button>
           <button 
             onClick={() => copy(localValue)}
-            className="p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" 
+            className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" 
             title="Copy"
           >
-            {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+            {copied ? <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-green-500" /> : <Copy className="w-3.5 h-3.5 md:w-4 md:h-4" />}
           </button>
         </div>
       </div>
 
-      <div className="px-6 py-4">
+      <div className="px-4 md:px-6 py-3 md:py-4">
         <TextArea
           value={localValue}
           onChange={(e) => handleChange(e.target.value)}
@@ -110,7 +106,7 @@ export const BodyEditor: React.FC<BodyEditorProps> = ({ value, onChange, disable
           placeholder='Enter request body (JSON, XML, or plain text)'
           rows={8}
           disabled={disabled}
-          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-sm focus:ring-indigo-500`}
+          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-xs md:text-sm focus:ring-indigo-500`}
         />
       </div>
     </div>

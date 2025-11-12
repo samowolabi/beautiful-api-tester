@@ -39,10 +39,10 @@ export const Modal: React.FC<ModalProps> = ({
       />
 
       {/* Modal */}
-      <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-        <div className={`bg-gray-900 rounded-lg shadow-2xl border border-gray-800 w-full ${maxWidthClasses[maxWidth]}`}>
-          {/* Header */}
-          <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800">
+      <div className="fixed inset-0 flex items-center justify-center z-50 p-4 overflow-y-auto">
+        <div className={`bg-gray-900 rounded-lg shadow-2xl border border-gray-800 w-full ${maxWidthClasses[maxWidth]} my-8 max-h-[calc(100vh-2rem)]`}>
+          {/* Header - Sticky */}
+          <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800 bg-gray-900 sticky top-0 z-10 rounded-t-lg">
             <div className="flex items-center gap-3">
               {icon && (
                 <div className="p-2 bg-indigo-500/10 rounded-lg">
@@ -64,8 +64,10 @@ export const Modal: React.FC<ModalProps> = ({
             </button>
           </div>
 
-          {/* Content */}
-          {children}
+          {/* Content - Scrollable */}
+          <div className="overflow-y-auto max-h-[calc(100vh-12rem)]">
+            {children}
+          </div>
         </div>
       </div>
     </>

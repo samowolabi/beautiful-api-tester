@@ -57,6 +57,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       description="Generate iframe code to embed this API request"
       icon={<Share2 className="w-5 h-5 text-indigo-400" />}
     >
+      {/* Scrollable Content */}
       <div className="p-6">
         <div className="space-y-6">
           {/* Iframe Dimensions */}
@@ -138,7 +139,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
           </div>
 
           {/* Preview Info */}
-          <div className=" bg-gray-800/50">
+          <div className="bg-gray-800/50">
             <p className="text-xs text-gray-400 leading-relaxed">
               <strong className="text-gray-300">How to use:</strong> Copy the iframe code above and paste it into your website, 
               documentation, or blog. The API request will be automatically loaded when the page loads.
@@ -158,8 +159,8 @@ export const ShareModal: React.FC<ShareModalProps> = ({
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="flex items-center justify-end gap-3 p-6 border-t border-gray-800">
+      {/* Footer - Sticky */}
+      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-800 bg-gray-900 sticky bottom-0 rounded-b-lg">
         <Button
           variant="ghost"
           onClick={onClose}

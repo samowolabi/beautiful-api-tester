@@ -128,11 +128,11 @@ function App() {
         isLoading={isLoading}
       />
 
-      {/* Main Content Area - Two Column Layout */}
-      <div className="flex flex-1 overflow-hidden">
+      {/* Main Content Area - Responsive Layout */}
+      <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
         {/* Left Panel - Request Configuration */}
-        <div className="w-1/2 border-r border-gray-800 flex flex-col">
-          <Tabs className="px-6">
+        <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-gray-800 flex flex-col">
+          <Tabs className="px-4 md:px-6">
             <Tab
               label="Body"
               isActive={activeTab === 'body'}
@@ -174,7 +174,7 @@ function App() {
         </div>
 
         {/* Right Panel - Response */}
-        <div className="w-1/2 flex flex-col">
+        <div className="w-full md:w-1/2 flex flex-col">
           <ResponsePanel response={response} isLoading={isLoading} />
         </div>
       </div>

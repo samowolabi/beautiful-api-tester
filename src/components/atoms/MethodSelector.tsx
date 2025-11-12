@@ -24,7 +24,7 @@ export const MethodSelector: React.FC<MethodSelectorProps> = ({ value, onChange 
         value={value}
         onChange={(e) => onChange(e.target.value as HttpMethod)}
         className={`
-          appearance-none bg-gray-800 border border-gray-700 rounded px-4 py-2 pr-10
+          appearance-none bg-gray-800 border border-gray-700 rounded px-4 py-2 pr-5
           font-heading font-bold text-sm cursor-pointer outline-0
           ${methodColors[value]}
         `}
