@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextArea } from '../atoms';
-import { ChevronDown, Trash2, HelpCircle, Sparkles, Wand2, Copy, FileDown, Check } from 'lucide-react';
+import { ChevronDown, Trash2, Wand2, Copy, Check } from 'lucide-react';
 import { useCopyToClipboard } from '../../utils/clipboard';
 
 interface BodyEditorProps {

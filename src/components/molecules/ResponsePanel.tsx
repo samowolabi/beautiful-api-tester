@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Filter, Download, Copy, MoreVertical, Check } from 'lucide-react';
+import { Download, Copy, Check } from 'lucide-react';
 import { Tab, Tabs } from '../atoms';
 import type { ApiResponse } from '../../types';
 import { useCopyToClipboard } from '../../utils/clipboard';
