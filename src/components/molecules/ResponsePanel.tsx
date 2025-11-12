@@ -136,17 +136,17 @@ export const ResponsePanel: React.FC<ResponsePanelProps> = ({ response, isLoadin
       {/* Response Content */}
       <div className="flex-1 overflow-auto px-4 md:px-6 py-3 md:py-4">
         {activeTab === 'json' && (
-          <pre className="bg-gray-950 rounded p-3 md:p-4 overflow-auto text-xs md:text-sm font-mono text-gray-300 border border-gray-800">
+          <pre className="bg-gray-950 rounded p-3 md:p-4 overflow-auto text-xs font-mono text-gray-300 border border-gray-800">
             {JSON.stringify(response.data, null, 2)}
           </pre>
         )}
         {activeTab === 'raw' && (
-          <pre className="bg-gray-950 rounded p-3 md:p-4 overflow-auto text-xs md:text-sm font-mono text-gray-300 border border-gray-800">
+          <pre className="bg-gray-950 rounded p-3 md:p-4 overflow-auto text-xs font-mono text-gray-300 border border-gray-800">
             {JSON.stringify(response.data)}
           </pre>
         )}
         {activeTab === 'headers' && (
-          <div className="bg-gray-950 rounded p-3 md:p-4 space-y-1 text-xs md:text-sm font-mono border border-gray-800">
+          <div className="bg-gray-950 rounded p-3 md:p-4 space-y-1 text-xs font-mono border border-gray-800">
             {Object.entries(response.headers).map(([key, value]) => (
               <div key={key} className="flex gap-2">
                 <span className="text-gray-500 min-w-[120px] md:min-w-[200px]">{key}:</span>

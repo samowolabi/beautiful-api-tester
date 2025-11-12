@@ -36,7 +36,7 @@ export const RequestPanel: React.FC<RequestPanelProps> = ({
             placeholder="Enter request URL"
             value={url}
             onChange={(e) => onUrlChange(e.target.value)}
-            className="font-mono text-xs md:text-sm bg-transparent border-none text-gray-400 focus:text-white"
+            className="font-mono text-xs bg-transparent border-none text-gray-400 focus:text-white"
           />
         </div>
         <div className="flex gap-1.5 shrink-0">
