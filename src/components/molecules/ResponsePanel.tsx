@@ -30,6 +30,39 @@ export const ResponsePanel: React.FC<ResponsePanelProps> = ({ response, isLoadin
     copy(textToCopy);
   };
 
+  const handleDownload = () => {
+    if (!response) return;
+
+    let content = '';
+    let filename = 'response';
+    let mimeType = 'application/json';
+
+    if (activeTab === 'json') {
+      content = JSON.stringify(response.data, null, 2);
+      filename = 'response.json';
+    } else if (activeTab === 'raw') {
+      content = JSON.stringify(response.data);
+      filename = 'response-raw.json';
+    } else if (activeTab === 'headers') {
+      content = Object.entries(response.headers)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join('\n');
+      filename = 'response-headers.txt';
+      mimeType = 'text/plain';
+    }
+
+    // Create blob and download
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   if (isLoading) {
     return (
       <div className="bg-gray-900 p-4 md:p-8 flex items-center justify-center min-h-[250px] md:min-h-[400px]">
@@ -83,7 +116,11 @@ export const ResponsePanel: React.FC<ResponsePanelProps> = ({ response, isLoadin
           <button className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" title="Wrap">
             <Wand2 className="w-3.5 h-3.5 md:w-4 md:h-4" />
           </button>
-          <button className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" title="Download">
+          <button 
+            onClick={handleDownload}
+            className="p-1 md:p-1.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white" 
+            title="Download"
+          >
             <Download className="w-3.5 h-3.5 md:w-4 md:h-4" />
           </button>
           <button 

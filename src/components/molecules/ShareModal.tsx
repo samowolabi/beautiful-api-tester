@@ -41,6 +41,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   width="${iframeWidth}" 
   height="${iframeHeight}"
   frameborder="0"
+  allow="clipboard-write"
   style="border: 1px solid #e5e7eb; border-radius: 8px;"
   title="API Tester"
 ></iframe>`;
