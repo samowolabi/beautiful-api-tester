@@ -13,7 +13,7 @@ export const Tab: React.FC<TabProps> = ({ label, isActive, onClick, icon, badge 
     <button
       onClick={onClick}
       className={`
-        px-3 md:px-4 py-2 md:py-3 font-heading text-xs md:text-sm transition-all duration-200
+        px-3 md:px-4 py-2 md:py-3 font-heading text-xs transition-all duration-200
         border-b-2 inline-flex items-center gap-1.5 md:gap-2
         ${isActive 
           ? 'border-indigo-500 text-white' 

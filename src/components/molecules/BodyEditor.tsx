@@ -106,7 +106,7 @@ export const BodyEditor: React.FC<BodyEditorProps> = ({ value, onChange, disable
           placeholder='Enter request body (JSON, XML, or plain text)'
           rows={8}
           disabled={disabled}
-          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-xs md:text-sm focus:border-indigo-500`}
+          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-xs focus:border-indigo-500`}
         />
       </div>
     </div>

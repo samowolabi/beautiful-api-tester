@@ -45,7 +45,7 @@ export const RequestPanel: React.FC<RequestPanelProps> = ({
             onClick={onSend}
             isLoading={isLoading}
             disabled={!url}
-            className="bg-[#6760e3] hover:bg-[#5b54d2] px-6 md:px-8 py-1.5 md:py-2 text-sm"
+            className="bg-[#6760e3] hover:bg-[#5b54d2] px-6 py-1.5 md:py-2 text-sm"
           >
             Send
           </Button>
@@ -53,22 +53,22 @@ export const RequestPanel: React.FC<RequestPanelProps> = ({
             <Button
               variant="secondary"
               onClick={onImportCurl}
-              className="bg-transparent border-0 px-2 py-1.5 md:py-2 gap-1.5 md:gap-2 text-gray-300 hover:text-white transition-all"
+              className="bg-transparent border-0 px-1 py-1.5 md:py-2 gap-1.5 md:gap-2 text-gray-300 hover:text-white transition-all"
               title="Import cURL"
             >
-              <Import size={16} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
-              <span className="text-xs md:text-sm font-medium text-gray-400">Import</span>
+              <Import size={14} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
+              <span className="text-xs font-medium text-gray-400">Import</span>
             </Button>
           )}
           {onShare && (
             <Button
               variant="secondary"
               onClick={onShare}
-              className="bg-transparent border-0 hover:bg-[#101727] px-2 py-1.5 md:py-2 gap-1.5 md:gap-2 text-gray-300 hover:text-white transition-all"
+              className="bg-transparent border-0 hover:bg-[#101727] px-1 py-1.5 md:py-2 gap-1.5 md:gap-2 text-gray-300 hover:text-white transition-all"
               title="Embed"
             >
-              <Code2 size={16} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
-              <span className="text-xs md:text-sm font-medium text-gray-400">Embed</span>
+              <Code2 size={14} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
+              <span className="text-xs font-medium text-gray-400">Embed</span>
             </Button>
           )}
         </div>
