@@ -95,7 +95,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex flex-col">
+    <div className="min-h-screen bg-gray-900 flex flex-col">
       {/* Import cURL Modal */}
       <ImportCurlModal
         isOpen={isImportModalOpen}
