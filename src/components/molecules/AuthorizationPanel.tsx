@@ -107,7 +107,7 @@ export const AuthorizationPanel: React.FC<AuthorizationPanelProps> = ({
               </div>
             </div>
 
-            <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3 md:p-4">
+            <div className="bg-gray-800/50">
               <p className="text-xs text-gray-400 leading-relaxed">
                 The authorization header will be automatically generated when you send the request.
               </p>
