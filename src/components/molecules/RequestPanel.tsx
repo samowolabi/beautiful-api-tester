@@ -1,6 +1,7 @@
 import React from 'react';
 import { Import, Code2 } from 'lucide-react';
-import { Button, Input, MethodSelector } from '../atoms';
+import { Button, Input } from '../atoms';
+import { MethodSelector } from '../compounds';
 import type { HttpMethod } from '../../types';
 
 interface RequestPanelProps {
