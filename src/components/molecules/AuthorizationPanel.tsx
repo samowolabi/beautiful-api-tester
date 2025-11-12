@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, Trash2, Eye, EyeOff } from 'lucide-react';
+import { Trash2, Eye, EyeOff } from 'lucide-react';
 import { Input, Checkbox } from '../atoms';
 import type { Authentication, AuthenticationType } from '../../types';
 
