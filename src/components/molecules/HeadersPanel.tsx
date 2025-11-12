@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plus, X } from 'lucide-react';
-import { Button, Input } from '../atoms';
+import { Button, Input, Checkbox } from '../atoms';
 import type { Header } from '../../types';
 
 interface HeadersPanelProps {
@@ -55,11 +55,9 @@ export const HeadersPanel: React.FC<HeadersPanelProps> = ({ headers, onChange })
             {headers.map((header) => (
               <div key={header.id} className="grid grid-cols-12 gap-1.5 md:gap-2 items-center">
                 <div className="col-span-1 flex justify-center">
-                  <input
-                    type="checkbox"
+                  <Checkbox
                     checked={header.enabled}
-                    onChange={(e) => updateHeader(header.id, 'enabled', e.target.checked)}
-                    className="w-3.5 h-3.5 md:w-4 md:h-4 text-indigo-600 bg-gray-800 border-gray-700 rounded focus:ring-indigo-500"
+                    onChange={(checked) => updateHeader(header.id, 'enabled', checked)}
                   />
                 </div>
                 <div className="col-span-5">

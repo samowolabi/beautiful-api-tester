@@ -137,7 +137,6 @@ function App() {
               label="Body"
               isActive={activeTab === 'body'}
               onClick={() => setActiveTab('body')}
-              badge="●"
             />
             <Tab
               label="Authorization"

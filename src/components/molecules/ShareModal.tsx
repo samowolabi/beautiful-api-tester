@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Share2, Copy, Check } from 'lucide-react';
+import { Code2, Copy, Check } from 'lucide-react';
 import { Button, TextArea } from '../atoms';
 import { Modal } from './Modal';
 import { ApiClient } from '../../utils/api-client';
@@ -53,9 +53,9 @@ export const ShareModal: React.FC<ShareModalProps> = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Share as Embed"
+      title="Embed Code"
       description="Generate iframe code to embed this API request"
-      icon={<Share2 className="w-5 h-5 text-indigo-400" />}
+      icon={<Code2 className="w-5 h-5 text-indigo-400" />}
     >
       {/* Scrollable Content */}
       <div className="p-6">
@@ -68,7 +68,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                 type="text"
                 value={iframeWidth}
                 onChange={(e) => setIframeWidth(e.target.value)}
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 text-sm focus:outline-none focus:border-indigo-500"
                 placeholder="100%"
               />
             </div>
@@ -78,7 +78,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                 type="text"
                 value={iframeHeight}
                 onChange={(e) => setIframeHeight(e.target.value)}
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 text-sm focus:outline-none focus:border-indigo-500"
                 placeholder="600px"
               />
             </div>

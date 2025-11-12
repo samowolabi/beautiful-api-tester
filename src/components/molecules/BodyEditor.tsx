@@ -64,7 +64,7 @@ export const BodyEditor: React.FC<BodyEditorProps> = ({ value, onChange, disable
             <select 
               value={contentType}
               onChange={(e) => setContentType(e.target.value)}
-              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 pr-6 md:pr-8 rounded border border-gray-700 appearance-none cursor-pointer hover:bg-gray-750 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 pr-6 md:pr-8 rounded border border-gray-700 appearance-none cursor-pointer hover:bg-gray-750 focus:outline-none focus:border-indigo-500"
             >
               <option value="application/json">application/json</option>
               <option value="application/xml">application/xml</option>
@@ -106,7 +106,7 @@ export const BodyEditor: React.FC<BodyEditorProps> = ({ value, onChange, disable
           placeholder='Enter request body (JSON, XML, or plain text)'
           rows={8}
           disabled={disabled}
-          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-xs md:text-sm focus:ring-indigo-500`}
+          className={`${disabled ? 'bg-gray-800 text-gray-500' : 'bg-gray-950 text-gray-300'} border-gray-800 font-mono text-xs md:text-sm focus:border-indigo-500`}
         />
       </div>
     </div>

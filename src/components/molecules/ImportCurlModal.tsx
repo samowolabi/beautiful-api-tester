@@ -75,7 +75,7 @@ export const ImportCurlModal: React.FC<ImportCurlModalProps> = ({
               }}
               placeholder="curl -X POST https://api.example.com/endpoint \&#10;  -H 'Content-Type: application/json' \&#10;  -H 'Authorization: Bearer YOUR_TOKEN' \&#10;  -d '{&quot;key&quot;: &quot;value&quot;}'"
               rows={10}
-              className="font-mono text-sm bg-gray-950 border-gray-700 text-gray-300 outline-0 focus:ring-indigo-500 focus:border-indigo-500"
+              className="font-mono text-sm bg-gray-950 border-gray-700 text-gray-300 outline-0 focus:border-indigo-500"
             />
           </div>
 

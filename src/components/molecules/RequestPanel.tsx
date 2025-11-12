@@ -1,5 +1,5 @@
 import React from 'react';
-import { Import, Share2 } from 'lucide-react';
+import { Import, Code2 } from 'lucide-react';
 import { Button, Input, MethodSelector } from '../atoms';
 import type { HttpMethod } from '../../types';
 
@@ -64,10 +64,10 @@ export const RequestPanel: React.FC<RequestPanelProps> = ({
               variant="secondary"
               onClick={onShare}
               className="bg-transparent border-0 hover:bg-[#101727] px-2 py-1.5 md:py-2 gap-1.5 md:gap-2 text-gray-300 hover:text-white transition-all"
-              title="Share as Embed"
+              title="Embed"
             >
-              <Share2 size={16} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
-              <span className="text-xs md:text-sm font-medium text-gray-400">Share</span>
+              <Code2 size={16} className="md:w-[18px] md:h-[18px]" color='#9CA3AF' />
+              <span className="text-xs md:text-sm font-medium text-gray-400">Embed</span>
             </Button>
           )}
         </div>
